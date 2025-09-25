@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binj - Connexion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+    <header class="auth-header">
+        <h1 class="logo" aria-label="Binj - Plateforme de streaming">BINJ</h1>
+    </header>
+    
+    <main class="auth-main">
+        <section class="auth-container" role="main" aria-labelledby="login-title">
+            <h2 id="login-title">Se connecter</h2>
+            <form class="auth-form" id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" required aria-describedby="email-error">
+                    <span class="error-message" id="email-error" aria-live="polite"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" required aria-describedby="password-error">
+                    <span class="error-message" id="password-error" aria-live="polite"></span>
+                </div>
+                
+                <button type="submit" class="btn-primary" aria-describedby="login-status">
+                    Se connecter
+                </button>
+                <div id="login-status" aria-live="polite" class="sr-only"></div>
+            </form>
+            
+            <div class="auth-links">
+                <p>Nouveau sur Binj ? <a href="subscription.html" class="signup-link">S'inscrire maintenant</a></p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="auth.js"></script>
+</body>
+</html>

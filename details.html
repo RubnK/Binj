@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binj - Détails</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="main-page">
+    <header class="main-header">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+            <a href="home.html" class="logo" aria-label="Retour à l'accueil">BINJ</a>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="home.html" role="menuitem">Accueil</a></li>
+                <li role="none"><a href="search.html" role="menuitem">Recherche</a></li>
+            </ul>
+            <div class="user-menu">
+                <button class="user-avatar" aria-label="Menu utilisateur" aria-expanded="false">
+                    <span>U</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="details-main" role="main">
+        <section class="details-hero" aria-labelledby="movie-title">
+            <div class="details-backdrop">
+                <img id="backdrop-img" src="" alt="" class="backdrop-image">
+            </div>
+            <div class="details-content">
+                <div class="details-info">
+                    <h2 id="movie-title">Titre du film</h2>
+                    <div class="movie-meta" role="group" aria-label="Informations du film">
+                        <span class="release-date" id="release-date"></span>
+                        <span class="rating" id="rating" aria-label="Note"></span>
+                        <span class="runtime" id="runtime"></span>
+                    </div>
+                    <p class="movie-overview" id="movie-overview">
+                        Description du film...
+                    </p>
+                    <div class="movie-actions">
+                        <button class="btn-primary" aria-label="Lire le film">
+                            ▶ Lecture
+                        </button>
+                        <button class="btn-secondary" aria-label="Ajouter à ma liste">
+                            + Ma liste
+                        </button>
+                    </div>
+                </div>
+                <div class="details-poster">
+                    <img id="poster-img" src="" alt="" class="poster-image">
+                </div>
+            </div>
+        </section>
+        
+        <section class="additional-info" aria-labelledby="additional-title">
+            <h3 id="additional-title">Informations supplémentaires</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>Genres</h4>
+                    <p id="genres">-</p>
+                </div>
+                <div class="info-item">
+                    <h4>Langue originale</h4>
+                    <p id="original-language">-</p>
+                </div>
+                <div class="info-item">
+                    <h4>Budget</h4>
+                    <p id="budget">-</p>
+                </div>
+                <div class="info-item">
+                    <h4>Recettes</h4>
+                    <p id="revenue">-</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="similar-movies" aria-labelledby="similar-title">
+            <h3 id="similar-title">Films similaires</h3>
+            <div class="movie-carousel" role="region" aria-label="Films similaires">
+                <div class="carousel-container" id="similar-movies">
+                    <div class="loading">Chargement...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="auth.js"></script>
+    <script src="api.js"></script>
+    <script src="details.js"></script>
+</body>
+</html>

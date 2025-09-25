@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binj - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="main-page">
+    <header class="main-header">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+            <a href="home.html" class="logo" aria-label="Retour à l'accueil">BINJ</a>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="home.html" role="menuitem" aria-current="page">Accueil</a></li>
+                <li role="none"><a href="search.html" role="menuitem">Recherche</a></li>
+            </ul>
+            <div class="user-menu">
+                <button class="user-avatar" aria-label="Menu utilisateur" aria-expanded="false">
+                    <span>U</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="home-main">
+        <section class="hero-section" role="banner" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h2 id="hero-title">Film du moment</h2>
+                <p class="hero-description">Découvrez notre sélection du moment</p>
+                <div class="hero-actions">
+                    <button class="btn-primary" aria-label="Lire la bande-annonce">
+                        ▶ Bande-annonce
+                    </button>
+                    <button class="btn-secondary" aria-label="Ajouter à ma liste">
+                        + Ma liste
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-sections" role="main">
+            <article class="movie-section" aria-labelledby="trending-title">
+                <h3 id="trending-title">Tendances actuelles</h3>
+                <div class="movie-carousel" role="region" aria-label="Films tendances">
+                    <div class="carousel-container" id="trending-movies">
+                        <!-- Les films seront chargés ici via JavaScript -->
+                        <div class="loading" aria-label="Chargement en cours">Chargement...</div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="movie-section" aria-labelledby="popular-title">
+                <h3 id="popular-title">Films populaires</h3>
+                <div class="movie-carousel" role="region" aria-label="Films populaires">
+                    <div class="carousel-container" id="popular-movies">
+                        <div class="loading" aria-label="Chargement en cours">Chargement...</div>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="movie-section" aria-labelledby="series-title">
+                <h3 id="series-title">Séries du moment</h3>
+                <div class="movie-carousel" role="region" aria-label="Séries populaires">
+                    <div class="carousel-container" id="popular-series">
+                        <div class="loading" aria-label="Chargement en cours">Chargement...</div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+    <script src="auth.js"></script>
+    <script src="api.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binj - Recherche</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="main-page">
+    <header class="main-header">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
+            <a href="home.html" class="logo" aria-label="Retour à l'accueil">BINJ</a>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="home.html" role="menuitem">Accueil</a></li>
+                <li role="none"><a href="search.html" role="menuitem" aria-current="page">Recherche</a></li>
+            </ul>
+            <div class="user-menu">
+                <button class="user-avatar" aria-label="Menu utilisateur" aria-expanded="false">
+                    <span>U</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="search-main">
+        <section class="search-section" role="search" aria-labelledby="search-title">
+            <h2 id="search-title">Rechercher des films et séries</h2>
+            <form class="search-form" role="search">
+                <div class="search-input-container">
+                    <label for="search-input" class="sr-only">Rechercher un titre</label>
+                    <input 
+                        type="search" 
+                        id="search-input" 
+                        placeholder="Rechercher un film, une série..." 
+                        aria-label="Champ de recherche"
+                        aria-describedby="search-results-info"
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="search-btn" aria-label="Lancer la recherche">
+                        🔍
+                    </button>
+                </div>
+            </form>
+            <div id="search-results-info" aria-live="polite" class="sr-only"></div>
+        </section>
+        
+        <section class="search-results" role="main" aria-labelledby="results-title">
+            <h3 id="results-title" class="results-title" aria-live="polite">
+                Tapez quelque chose pour commencer votre recherche
+            </h3>
+            <div class="results-grid" id="search-results" role="region" aria-label="Résultats de recherche">
+                <!-- Les résultats apparaîtront ici -->
+            </div>
+            
+            <div class="no-results" id="no-results" style="display: none;" role="status">
+                <h4>Aucun résultat trouvé</h4>
+                <p>Essayez avec d'autres mots-clés</p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="auth.js"></script>
+    <script src="api.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>

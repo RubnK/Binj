@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binj - Choisir un abonnement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+    <header class="auth-header">
+        <h1 class="logo">BINJ</h1>
+        <nav>
+            <a href="index.html" class="back-link" aria-label="Retour à la connexion">Connexion</a>
+        </nav>
+    </header>
+    
+    <main class="subscription-main">
+        <section class="subscription-hero" role="banner">
+            <h2>Choisissez votre abonnement</h2>
+            <p>Regardez vos films et séries préférés en illimité</p>
+        </section>
+        
+        <section class="plans-container" role="main" aria-labelledby="plans-title">
+            <h3 id="plans-title" class="sr-only">Plans d'abonnement disponibles</h3>
+            
+            <article class="plan-card" data-plan="basic">
+                <header class="plan-header">
+                    <h4>Essentiel</h4>
+                    <div class="price">7,99€<span>/mois</span></div>
+                </header>
+                <ul class="plan-features" role="list">
+                    <li>HD disponible</li>
+                    <li>1 écran en même temps</li>
+                    <li>Téléchargement sur 1 appareil</li>
+                </ul>
+                <button class="btn-plan" data-plan="basic" aria-describedby="basic-description">
+                    Choisir Essentiel
+                </button>
+                <div id="basic-description" class="sr-only">Plan Essentiel à 7,99€ par mois</div>
+            </article>
+            
+            <article class="plan-card popular" data-plan="standard">
+                <div class="popular-badge" aria-label="Le plus populaire">Le plus populaire</div>
+                <header class="plan-header">
+                    <h4>Standard</h4>
+                    <div class="price">11,99€<span>/mois</span></div>
+                </header>
+                <ul class="plan-features" role="list">
+                    <li>Full HD disponible</li>
+                    <li>2 écrans en même temps</li>
+                    <li>Téléchargement sur 2 appareils</li>
+                </ul>
+                <button class="btn-plan" data-plan="standard" aria-describedby="standard-description">
+                    Choisir Standard
+                </button>
+                <div id="standard-description" class="sr-only">Plan Standard à 11,99€ par mois</div>
+            </article>
+            
+            <article class="plan-card" data-plan="premium">
+                <header class="plan-header">
+                    <h4>Premium</h4>
+                    <div class="price">15,99€<span>/mois</span></div>
+                </header>
+                <ul class="plan-features" role="list">
+                    <li>Ultra HD et HDR</li>
+                    <li>4 écrans en même temps</li>
+                    <li>Téléchargement sur 4 appareils</li>
+                </ul>
+                <button class="btn-plan" data-plan="premium" aria-describedby="premium-description">
+                    Choisir Premium
+                </button>
+                <div id="premium-description" class="sr-only">Plan Premium à 15,99€ par mois</div>
+            </article>
+        </section>
+    </main>
+    
+    <script src="auth.js"></script>
+</body>
+</html>
